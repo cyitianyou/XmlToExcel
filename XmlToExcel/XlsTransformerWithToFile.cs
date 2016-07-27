@@ -46,6 +46,8 @@ namespace XmlToExcel
             }
 
         }
+        //是否使用微软Office组件,如果否则使用NPOI
+        public bool isUseMicrosoftOffice = true;
 
         private MyModelMapping _myMap;
         private MyModelMapping myMap
@@ -78,7 +80,7 @@ namespace XmlToExcel
                 ds.Tables.Add(table);
             }
             string filePath = Path.Combine(outPutFolder, string.Format("datadictionary_{0}_v1.1.xlsx", this.DomainModel.Name));
-            return ExcelHelper.ImportToExcel(ds, filePath);
+            return ExcelHelper.ImportToExcel(ds, filePath, isUseMicrosoftOffice);
         }
 
         private System.Data.DataTable ToDataTable(IBusinessObject obj)

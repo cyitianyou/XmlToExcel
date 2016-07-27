@@ -30,14 +30,6 @@ namespace XmlToExcel
         public Form1()
         {
             InitializeComponent();
-            int a = 99;
-            object b = a;
-            a = 100;
-            int c = Convert.ToInt32(b);
-            if (true)
-            {
-                
-            }
         }
 
         private void btn_input_Click(object sender, EventArgs e)
@@ -118,6 +110,7 @@ namespace XmlToExcel
                             XmlTransformer myXml = new XmlTransformer();
                             var domainModel = myXml.ToDomainModel(fileNames);
                             XlsTransformerWithToFile myXls = new XlsTransformerWithToFile();
+                            myXls.isUseMicrosoftOffice = this.checkBox1.Checked;
                             myXls.folderPath = Path.Combine(Environment.CurrentDirectory, "ExcelMapping");
                             myXls.ToFile(outFolder, domainModel);
                             this.stateLable.Text = string.Format("{0}导出完成", item.FolderName);

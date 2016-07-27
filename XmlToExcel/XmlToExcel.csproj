@@ -60,6 +60,9 @@
       <EmbedInteropTypes>False</EmbedInteropTypes>
       <HintPath>Plugin\Microsoft.Office.Interop.Excel.dll</HintPath>
     </Reference>
+    <Reference Include="NPOI">
+      <HintPath>Plugin\Net40\NPOI.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Reflection.Context" />
@@ -115,6 +118,12 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Plugin\BTulz.ModelsTransformer.dll" />
+    <Content Include="Plugin\Net40\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="Plugin\Net40\NPOI.dll" />
+    <Content Include="Plugin\Net40\NPOI.OOXML.dll" />
+    <Content Include="Plugin\Net40\NPOI.OpenXml4Net.dll" />
+    <Content Include="Plugin\Net40\NPOI.OpenXmlFormats.dll" />
+    <Content Include="Plugin\Net40\NPOI.XML" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
